@@ -8,7 +8,7 @@ import java.util.List;
 * starying from the first two characters of the serahc query find up to three best matches in the repository
 * soted alpahbeticalcyy*/
 
-public class search {
+public class Search {
 
     List<List<String>> findSuggestions (List<String> repository, String query){
         List<List<String>> result = new ArrayList<>() ;
