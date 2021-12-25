@@ -33,5 +33,13 @@ class AlienDictionaryTest {
         Assertions.assertEquals(expected_3, output_3);
     }
 
+    @Test
+    public void IsNotSortedAgainAgain() {
+        String arr_3[] = {"kuvp","q"};
+        String order_3 = "abcdefghijklmnopqrstuvwxyz";
+        boolean expected_3 = false;
+        boolean output_3 = new AlienDictionary().isAlienSorted(arr_3, order_3);
+        Assertions.assertEquals(expected_3, output_3);
+    }
 
 }
