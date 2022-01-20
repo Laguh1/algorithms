@@ -1,29 +1,12 @@
 package practiceam;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.*;
+import java.util.List;
+import java.util.stream.IntStream;
 
-public class freshPromo {
-}
-class Result {
+import static java.util.stream.Collectors.toList;
 
-    /*
-     * Complete the 'foo' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. STRING_ARRAY codeList
-     *  2. STRING_ARRAY shoppingCart
-     */
-
-    public static int foo(List<String> codeList, List<String> shoppingCart) {
-        // Write your code here
-
-    }
-
-}
-
-public class Solution {
+class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -50,9 +33,9 @@ public class Solution {
                 })
                 .collect(toList());
 
-        int result = Result.foo(codeList, shoppingCart);
+      //  int result = Result.foo(codeList, shoppingCart);
 
-        bufferedWriter.write(String.valueOf(result));
+    //    bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
 
         bufferedReader.close();
