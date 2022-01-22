@@ -10,7 +10,7 @@ public class BinarySearch {
             return x;
         }
 
-        if(right == left){
+        if(right - left <=1){
             return -1;
         }
 
@@ -23,6 +23,25 @@ public class BinarySearch {
         }
 
         return findCorrectValue(arrayOfNumbers, x, left, right);
+    }
+
+    public static int enhancedFindCorrectValue(int[] arrayOfNumbers, int x, int left, int right){
+        int mid = left + (right-left)/2;
+
+        if(right < left){
+            return -1;
+        }
+
+        if (arrayOfNumbers[mid] == x){
+            return mid;
+        }
+        else if(arrayOfNumbers[mid]<x){
+            return enhancedFindCorrectValue(arrayOfNumbers, x, mid+1, right);
+        }
+
+        else {
+            return enhancedFindCorrectValue(arrayOfNumbers, x, left, mid -1);
+        }
     }
 
 }
